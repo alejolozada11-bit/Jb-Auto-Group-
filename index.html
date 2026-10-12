@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Strategia reel JB Auto Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: una colonna da report, navigazione sticky; dettagli presi dal piazzale (targa, cartello prezzo sul parabrezza, contachilometri) */
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --fg:#15181d; --muted:#5b6370; --line:#dde1e7;
+  --plate:#1d3fb8; --plate-ink:#ffffff; --sticker:#ffd21f; --sticker-ink:#15181d;
+  --good:#1f7a4d; --bad:#b4342b; --ig:#1d3fb8; --fb:#7b8aa6;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1216; --surface:#171b21; --fg:#e7eaef; --muted:#9aa3b1; --line:#2a3039;
+  --plate:#6f8cff; --plate-ink:#0f1216; --sticker:#ffd21f; --sticker-ink:#15181d;
+  --good:#5cc98f; --bad:#ff7b6e; --ig:#6f8cff; --fb:#56627a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1216; --surface:#171b21; --fg:#e7eaef; --muted:#9aa3b1; --line:#2a3039;
+  --plate:#6f8cff; --plate-ink:#0f1216; --sticker:#ffd21f; --sticker-ink:#15181d;
+  --good:#5cc98f; --bad:#ff7b6e; --ig:#6f8cff; --fb:#56627a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:var(--plate)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--plate);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,5vw,42px);font-weight:700;letter-spacing:.01em}
+h3{font-size:22px;font-weight:600;letter-spacing:.02em}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);font-size:17px}
+.label{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:10px 16px}
+nav.top .wrap{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center}
+nav.top a{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+nav.top a:hover{color:var(--fg)}
+header.hero{padding-block:40px 28px;display:grid;gap:22px}
+.plate{display:inline-flex;align-items:stretch;border:2px solid var(--fg);border-radius:6px;overflow:hidden;font-family:var(--display);font-weight:700;width:max-content;max-width:100%}
+.plate .eu{background:var(--plate);color:var(--plate-ink);padding:4px 8px;font-size:14px;display:flex;flex-direction:column;justify-content:flex-end;letter-spacing:.05em}
+.plate .code{background:var(--surface);padding:2px 14px;font-size:30px;letter-spacing:.12em}
+.hero h1{font-size:clamp(44px,9vw,88px);font-weight:700;text-transform:uppercase}
+.hero h1 span{color:var(--plate)}
+section{padding-block:44px 8px;border-top:1px solid var(--line);margin-top:28px;display:grid;gap:20px;scroll-margin-top:64px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.card p{font-size:15px}
+.card ul{margin:0;padding-left:18px;font-size:15px}
+.card ul li+li{margin-top:6px}
+.odo{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.odo .m{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:6px;align-content:start}
+.digits{display:flex;gap:3px;flex-wrap:wrap}
+.digits b{font-family:var(--mono);font-weight:600;font-size:26px;background:var(--fg);color:var(--bg);border-radius:3px;padding:0 5px;line-height:1.35;font-variant-numeric:tabular-nums}
+.digits i{font-style:normal;font-family:var(--mono);font-size:26px;line-height:1.35;color:var(--muted)}
+.odo .m small{color:var(--muted);font-size:13px;line-height:1.4}
+.sticker{display:inline-block;background:var(--sticker);color:var(--sticker-ink);font-family:var(--display);font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 9px;border-radius:3px;font-size:15px;transform:rotate(-2deg);width:max-content}
+.bars{display:grid;gap:12px}
+.bars h4{margin:6px 0 0;font-family:var(--display);font-size:17px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.bar{display:grid;gap:4px}
+.bar .t{display:flex;justify-content:space-between;gap:12px;font-size:14px;align-items:baseline}
+.bar .t .name{min-width:0;overflow-wrap:anywhere}
+.bar .t .links{font-size:12px;white-space:nowrap}
+.bar .t .links a{margin-left:6px}
+.bar .track{height:12px;background:var(--line);border-radius:2px;overflow:hidden;display:flex}
+.bar .ig{background:var(--ig);height:100%}
+.bar .fb{background:var(--fb);height:100%}
+.bar .meta{font-size:12.5px;color:var(--muted);font-family:var(--mono);font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.dim{color:var(--muted)}
+.ring{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:.03em;text-transform:uppercase;background:var(--bg)}
+.calc{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:500}
+.field input[type=number]{font-family:var(--mono);font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);width:100%}
+.field input[type=range]{width:100%;accent-color:var(--plate)}
+.out{display:grid;gap:10px;align-content:start}
+.out .big{font-family:var(--mono);font-size:clamp(30px,6vw,44px);font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+.verdict{border-left:4px solid var(--sticker);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;display:grid;gap:8px}
+.miles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.mile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:4px}
+.mile .v{font-family:var(--mono);font-weight:600;font-size:28px;font-variant-numeric:tabular-nums}
+.mile.goal{border-color:var(--plate);box-shadow:inset 0 0 0 1px var(--plate)}
+q{quotes:"«" "»";font-style:italic}
+.quotes{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.pillar{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
+.share{font-family:var(--mono);font-weight:600;font-size:28px;line-height:1;min-width:3.2ch;text-align:right;color:var(--plate)}
+.share small{display:block;font-size:11px;color:var(--muted);font-family:var(--body);font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+.week{display:grid;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.day{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.day:last-child{border-bottom:0}
+.day .d{font-family:var(--display);font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.03em}
+.day .d small{display:block;font-family:var(--body);font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted);background:var(--bg)}
+.day.shoot{background:var(--bg)}
+.tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px;width:max-content}
+.tag.rec{background:var(--plate);color:var(--plate-ink)}
+.tag.warn{background:var(--sticker);color:var(--sticker-ink)}
+.tag.done{border:1px solid var(--good);color:var(--good)}
+.lines{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.lines li{border-left:3px solid var(--plate);padding:2px 0 2px 12px;font-size:15px}
+.lines li small{display:block;color:var(--muted);font-size:13px}
+.decisions{counter-reset:d;display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.decisions li{counter-increment:d;display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.decisions li::before{content:counter(d);font-family:var(--mono);font-weight:600;color:var(--plate);font-size:20px;line-height:1.3}
+.decisions li.ok{opacity:.75}
+.decisions li.ok::before{content:"✓";color:var(--good)}
+footer{margin-top:40px;font-size:13px;color:var(--muted);display:grid;gap:6px}
+footer ul{margin:0;padding-left:18px}
+@media (max-width:520px){.day{grid-template-columns:1fr;gap:6px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+@media print{
+  nav.top{display:none!important}
+  body{padding-inline:0}
+  .card,.mile,.odo .m,.tbl,tr,.verdict,.decisions li,.bar{break-inside:avoid}
+  section{break-inside:auto;margin-top:12px;padding-block:24px 4px}
+  h2,h3{break-after:avoid}
+  a{color:var(--plate);text-decoration:underline}
+  .sticker{transform:none}
+}
+@page{size:A4;margin:14mm 12mm}
+</style>
+
+
+</head>
+<body>
+<nav class="top" aria-label="Sezioni"><div class="wrap">
+  <a href="#diagnosi">Diagnosi</a><a href="#obiettivo">Obiettivo</a><a href="#voce">Voce</a><a href="#pubblico">Pubblico</a><a href="#pilastri">Pilastri</a><a href="#riferimenti">Riferimenti</a><a href="#numeri">Numeri</a><a href="#attenzioni">Attenzioni</a><a href="#da-voi">Da voi</a>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="plate" aria-label="JB 40 al mese"><span class="eu">I</span><span class="code">JB · 40/MESE</span></div>
+  <h1>Strategia reel <span>JB Auto Group</span></h1>
+  <p class="lede">Dove sono oggi i vostri profili, dove li portiamo nei prossimi tre mesi e come lavoreremo sui 40 video al mese con Vlad e Daniela in camera. Abbiamo analizzato 370 vostri video tra Instagram, Facebook e TikTok, 377 video di concessionari e creator del settore e oltre 1.300 commenti del vostro pubblico.</p>
+</header>
+
+<section id="diagnosi">
+  <span class="label">01 · Dove siete oggi</span>
+  <h2>Facebook porta più views di Instagram, e da settembre calano entrambi</h2>
+  <div class="odo">
+    <div class="m"><span class="label">Follower Instagram</span><div class="digits" aria-label="8166"><b>8</b><i>.</i><b>1</b><b>6</b><b>6</b></div><small>@jb.autogroup, 12 ottobre 2026</small></div>
+    <div class="m"><span class="label">Mediana views Instagram</span><div class="digits" aria-label="9009"><b>9</b><i>.</i><b>0</b><b>0</b><b>9</b></div><small>120 reel, febbraio-ottobre</small></div>
+    <div class="m"><span class="label">Mediana views Facebook</span><div class="digits" aria-label="13000"><b>1</b><b>3</b><i>.</i><b>0</b><b>0</b><b>0</b></div><small>130 reel di jbcarsriva, maggio-ottobre</small></div>
+    <div class="m"><span class="label">Views luglio-ottobre</span><div class="digits" aria-label="2,6 milioni"><b>2</b><i>,</i><b>6</b><i>M</i></div><small>su Facebook, contro 1,5 M su Instagram</small></div>
+    <div class="m"><span class="label">Commenti da metà agosto</span><div class="digits" aria-label="601"><b>6</b><b>0</b><b>1</b></div><small>su Facebook, contro 338 su Instagram</small></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Views per video, Instagram + Facebook: i migliori e i peggiori</h3>
+      <div class="legend"><span style="--c:var(--ig)">Instagram</span><span style="--c:var(--fb)">Facebook</span></div>
+      <div class="bars" id="bars"></div>
+      <p class="lede" style="font-size:13px">I peggiori sono scelti tra i video con almeno una settimana di vita. Facebook conta una "riproduzione" in modo diverso da una view di Instagram: i due numeri si sommano per avere l'ordine di grandezza, non per confrontarli uno a uno.</p>
+    </div>
+    <div class="card">
+      <h3>Cosa dicono i numeri</h3>
+      <ul>
+        <li><b>Facebook è il vostro canale più grande.</b> Da luglio a oggi 2,6 milioni di riproduzioni contro 1,5 milioni su Instagram, e da metà agosto 601 commenti contro 338. Per questo lo misuriamo sempre insieme a Instagram.</li>
+        <li><b>Stessa auto, pubblici diversi.</b> <a href="https://www.instagram.com/p/Da7fHDtCRs_/">"Alfisti siate meno pignoli"</a> fa 9.100 views su Instagram e <a href="https://www.facebook.com/reel/1611935127314703">159.000 su Facebook</a>. L'<a href="https://www.instagram.com/p/Dasf9aGNVWK/">Audi Q5 "in perfette condizioni"</a> 19.800 contro <a href="https://www.facebook.com/reel/1961071207908247">351.000</a>. Su Facebook vince l'auto concreta con il prezzo: con buona probabilità è il pubblico più vicino all'acquisto, e lo verificheremo con le richieste che arrivano.</li>
+        <li><b>Su Instagram vincono le auto da appassionati.</b> <a href="https://www.instagram.com/p/DdDnzt_uoOq/">BMW E36</a> (77.200), <a href="https://www.instagram.com/p/Dc5hyk8it5R/">Golf GTI</a> (46.100), <a href="https://www.instagram.com/p/DafBbSMNmZ6/">Audi Q5 nera</a> (42.000), <a href="https://www.instagram.com/p/DdHHyRlNuiw/">Classe A</a> (41.300), <a href="https://www.instagram.com/p/Dc5X_woukci/">420d</a> (40.300).</li>
+        <li><b>Le domande al pubblico fanno commentare.</b> <a href="https://www.instagram.com/p/Da08gygN9Bw/">"Ragazzi a che prezzo la comprereste?"</a> ha 50 commenti, il massimo su Instagram. <a href="https://www.facebook.com/reel/1637602518023016">"Non fartela scappare"</a> ne ha 74 su Facebook.</li>
+        <li><b>Da settembre calano entrambi.</b> La mediana Instagram scende da 10.200 (luglio) a 7.000 (settembre), quella di Facebook da 14.000-29.000 a 7.700. Il calo coincide con la fine dei video di Artiom, che su TikTok rendevano 3,4 volte gli altri. Quel formato, l'auto presentata da chi la guida e la conosce, lo riprende Vlad.</li>
+        <li><b>Doppi sensi e titoli generici restano in fondo.</b> <a href="https://www.instagram.com/p/DdTx9Sbq-QW/">"Più piccola di così..."</a> fa 8.100 views sommando le due piattaforme, <a href="https://www.instagram.com/p/DeHgFc7imBl/">"Ragazze amanti delle 500"</a> 8.100, <a href="https://www.instagram.com/p/DdsybW8iquF/">"Il re dell'usato"</a> 8.500, contro una mediana di 20.400. Li lasciamo fuori.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Mese</th><th>Mediana Instagram</th><th>Mediana Facebook</th><th>Views Instagram</th><th>Riproduzioni Facebook</th></tr></thead>
+    <tbody>
+      <tr><td>Luglio</td><td class="n">10.214</td><td class="n">14.000</td><td class="n">785.859</td><td class="n">1.755.200</td></tr>
+      <tr><td>Agosto</td><td class="n">10.672</td><td class="n">29.000</td><td class="n">196.927</td><td class="n">394.000</td></tr>
+      <tr><td>Settembre</td><td class="n">6.999</td><td class="n">7.700</td><td class="n">417.930</td><td class="n">390.000</td></tr>
+      <tr><td>Ottobre (fino al 12)</td><td class="n dim">5.455</td><td class="n dim">4.400</td><td class="n dim">63.036</td><td class="n dim">75.000</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid g3">
+    <div class="card"><span class="sticker">Cosa cambiamo subito</span><p>Ogni video ha i sottotitoli e si chiude con una sola richiesta chiara. La prima frase parte nel primo secondo: nel <a href="https://www.instagram.com/p/DafBbSMNmZ6/">reel dell'Audi Q5 nera</a> passano 18 secondi prima di vedere l'auto.</p></div>
+    <div class="card"><span class="sticker">Prezzo, km e commenti</span><p>Le domande più frequenti sotto i vostri video sono <q>Prezzo, km e cilindrata</q>, <q>anno e km?</q>, <q>dove vi trovate?</q>. Sono commenti, ma soprattutto clienti. Anno e km saranno sempre a schermo; il prezzo lo usiamo a rotazione: a schermo, con il gioco <a href="https://www.instagram.com/p/Da08gygN9Bw/">"a che prezzo la comprereste?"</a> o in privato con una parola chiave, e teniamo il formato che porta più richieste.</p></div>
+    <div class="card"><span class="sticker">Cosa teniamo</span><p>Il vostro tono. Ironico, diretto, con le sigle dei motori dette con naturalezza. Il pubblico lo riconosce e lo difende nei commenti (<q>Siete fortissimi ragazzi! Continuate così</q>).</p></div>
+  </div>
+</section>
+
+<section id="obiettivo">
+  <span class="label">02 · L'obiettivo su Instagram</span>
+  <h2>15.000 follower entro metà gennaio, quasi il doppio di oggi</h2>
+  <p>Arrivare a 30.000 follower in tre mesi vorrebbe dire portare ognuno dei 120 reel a una media tra 60.000 e 180.000 views: da 7 a 20 volte quello che fanno oggi. Un risultato così dipende da una serie di video virali, e nessun piano serio lo può promettere. 15.000 follower richiedono invece circa 23.000 views medie per reel, il doppio di oggi: un traguardo ambizioso, che costruiamo video dopo video.</p>
+  <div class="miles">
+    <div class="mile"><span class="label">Oggi · 12 ottobre</span><span class="v">8.166</span><small class="lede" style="font-size:13px">punto di partenza</small></div>
+    <div class="mile"><span class="label">15 novembre</span><span class="v">10.000</span><small class="lede" style="font-size:13px">+1.800 nel primo mese</small></div>
+    <div class="mile"><span class="label">15 dicembre</span><span class="v">12.300</span><small class="lede" style="font-size:13px">+2.300 nel secondo mese</small></div>
+    <div class="mile goal"><span class="label">15 gennaio · obiettivo</span><span class="v">15.000</span><small class="lede" style="font-size:13px">+2.700 nel terzo mese</small></div>
+  </div>
+  <div class="card">
+    <h3>Il calcolo, da provare</h3>
+    <div class="calc">
+      <div class="grid">
+        <div class="field"><label for="target">Follower obiettivo</label><input id="target" type="number" value="15000" min="0" step="500"></div>
+        <div class="field"><label for="current">Follower oggi</label><input id="current" type="number" value="8166" min="0" step="100"></div>
+        <div class="field"><label for="reels">Reel pubblicati in 3 mesi</label><input id="reels" type="number" value="120" min="1" step="1"></div>
+        <div class="field"><label for="rate">Nuovi follower ogni 1.000 views: <span id="rateOut" class="num">2,5</span></label><input id="rate" type="range" min="1" max="10" step="0.5" value="2.5"></div>
+      </div>
+      <div class="out">
+        <span class="label">Views medie necessarie per ogni reel</span>
+        <div class="big" id="need">22.800</div>
+        <p id="mult" class="lede">1,9 volte la media attuale (12.292)</p>
+        <p id="tot" class="lede">2,7 milioni di views in totale</p>
+      </div>
+    </div>
+  </div>
+  <div class="verdict">
+    <p><b>Come misuriamo il percorso.</b> Accanto ai follower seguiamo i due numeri che contano per vendere: le views totali Instagram + Facebook e le richieste che arrivano dai social.</p>
+    <p>Il calcolo usa una stima di 2,5 nuovi follower ogni 1.000 views. Con la crescita follower degli ultimi 90 giorni dai vostri Insights la sostituiamo con il dato reale e, se serve, aggiorniamo le tappe.</p>
+  </div>
+</section>
+
+<section id="voce">
+  <span class="label">03 · La vostra voce</span>
+  <h2>Una coppia che vende auto, e non si risparmia le battute</h2>
+  <p class="lede">L'abbiamo ricavata dai vostri video. Ogni copione la rispetta: se una battuta non suona come la direste voi, la riscriviamo.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Ruoli</h3><p><b>Daniela</b> è la voce del cliente: fa la domanda che il pubblico ha in testa e punzecchia Vlad. <b>Vlad</b> è quello che sa: tecnico, diretto, un filo di sfida. Siete una coppia anche fuori dal piazzale, e si sente: è un vantaggio che quasi nessun concessionario ha.</p></div>
+    <div class="card"><h3>Le vostre parole</h3><p>"Ragazzi", "raga", "a parte gli scherzi", "la diamo via", "sconticino", "motore immortale". Sigle dei motori (B47, N47, ZF, E46) dette come le dice un meccanico, senza spiegarle troppo.</p></div>
+    <div class="card"><h3>La struttura</h3><p>Una battuta tra voi due, poi "a parte gli scherzi", poi il dato concreto (km, prezzo, difetto, garanzia), poi una sola richiesta.</p></div>
+    <div class="card"><h3>Cosa lasciamo fuori</h3><ul><li>Il tono da spot: <q>Cerchi un'auto usata di qualità?</q></li><li>Parole da brochure: eccellenza, soluzioni, a 360 gradi.</li><li>Stereotipi e doppi sensi: i video di questo tipo stanno sotto la metà della mediana.</li><li>Promesse vaghe al posto dei numeri.</li></ul></div>
+  </div>
+  <div class="card">
+    <span class="tag warn">Spunti · ottobre 2026</span>
+    <h3>Idee nel vostro tono, da provare sul set</h3>
+    <p class="lede" style="font-size:14px">A ogni produzione ne arrivano di nuove.</p>
+    <ul class="lines">
+      <li>"Lei guarda il prezzo, lui guarda il motore." Ogni auto presentata da due punti di vista, e chi ha ragione lo decide chi commenta.<small>Format ricorrente, porta commenti</small></li>
+      <li>DANIELA: "Vlad, quanto l'hai pagata?" VLAD: "...Parliamo dei cerchi."<small>Apertura per un'auto in piazzale</small></li>
+      <li>"Questa a casa nostra non entra." La macchina che Daniela non vuole, spiegata da Vlad in 20 secondi.<small>Per gli appassionati</small></li>
+      <li>"Traduzione per umani": Vlad dice la sigla (B47, ZF, DSG), Daniela la traduce in una frase che capisce chiunque.<small>Format ricorrente, Senza fregature</small></li>
+      <li>VLAD: "Non dirlo a Daniela, ma questa me la tengo io." DANIELA (fuori campo): "Ti sento."<small>Chiusura per un'auto da appassionati</small></li>
+      <li>"Litighiamo noi, così tu non litighi col meccanico."<small>Chiusura per i video Senza fregature</small></li>
+      <li>"Chi ha ragione?" Daniela e Vlad scelgono due auto diverse per il budget di un follower. Decidono i commenti.<small>Usa le richieste vere dei commenti</small></li>
+      <li>La vostra storia raccontata attraverso le auto che avete avuto.<small>Pilastro Vlad e Daniela</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="pubblico">
+  <span class="label">04 · Il vostro pubblico</span>
+  <h2>Sei profili, presi dai commenti veri</h2>
+  <p class="lede">Ogni profilo parla con le parole che usa davvero sotto i vostri video.</p>
+  <div class="grid g3">
+    <div class="card"><span class="label">Compra</span><h3>Il primo budget</h3><p>18-30 anni, prima auto o neopatentato, 3.000-8.000 €. Teme la rata e la fregatura.</p><div class="quotes"><q>Le macchine sono piccole i prezzi no</q><q>C'è obbligo del finanziamento?</q><q>Hai qualcosa a benzina?</q></div></div>
+    <div class="card"><span class="label">Compra</span><h3>La famiglia pratica</h3><p>30-50 anni, seconda auto, SUV o station, 8.000-16.000 €. Teme le spese dopo l'acquisto. Con buona probabilità è il pubblico più forte su Facebook.</p><div class="quotes"><q>Io vorrei un Fiat Doblò passo lungo</q><q>Valuti permute?</q><q>Scambio con Evoque 2016?</q></div></div>
+    <div class="card"><span class="label">Amplifica</span><h3>L'appassionato</h3><p>20-45 anni, BMW, Alfa, Golf GTI. Conosce le sigle, giudica il prezzo, commenta e condivide. Compra meno spesso, ma fa girare i video.</p><div class="quotes"><q>Robustissimo il B47</q><q>Non è M Sport... non ha senso</q><q>Fosse stata 1.6 la Mito</q></div></div>
+    <div class="card"><span class="label">Diffida</span><h3>Lo scottato</h3><p>Ha preso, o ha sentito di, una fregatura. Ha bisogno di prove, non di promesse.</p><div class="quotes"><q>Ha i kilometri scalati. Attenzione</q><q>Macchina incidentata</q><q>Commercianti del piffero</q></div></div>
+    <div class="card"><span class="label">Viaggia</span><h3>Il compratore a distanza</h3><p>Toscana, Puglia, Sardegna, Sicilia. Fa centinaia di km per l'auto giusta, se prima ha tutte le informazioni.</p><div class="quotes"><q>Sono in Toscana, fatemi sapere</q><q>Fate trasporti in Sicilia?</q><q>Dove vi trovate?</q></div></div>
+    <div class="card"><span class="label">Nicchia</span><h3>Partite IVA e lavoratori</h3><p>Furgoni, 9 posti, IVA detraibile (c'è già il filtro sul vostro sito).</p><div class="quotes"><q>Trovami un Mercedes 9 posti</q><q>Iveco Massif 3.0 diesel</q></div></div>
+  </div>
+  <div class="card">
+    <span class="tag rec">Il nostro approccio</span>
+    <h3>Cerchi concentrici</h3>
+    <p>Al centro chi compra: il primo budget e la famiglia. L'appassionato porta commenti e condivisioni. Il compratore a distanza è la leva per crescere nel Nord Italia. Lo scottato attraversa tutto: ogni video contiene una prova concreta. Alle partite IVA dedichiamo un video ogni due settimane.</p>
+  </div>
+</section>
+
+<section id="pilastri">
+  <span class="label">05 · Pilastri editoriali</span>
+  <h2>Cinque pilastri, dieci reel a settimana</h2>
+  <p class="lede">Nascono dai vostri dati, dai migliori del settore e da quello che volete spingere: i temi della nicchia, la vostra storia, le auto che arrivano e i processi.</p>
+  <div class="grid g2">
+    <div class="card pillar"><div class="share">3<small>a sett.</small></div><div><h3>Auto in piazzale</h3><p>L'auto è la protagonista, presentata da Vlad con anno, km e prezzo. È il formato che vi porta più views su Instagram e su Facebook. Obiettivo: views e richieste.</p></div></div>
+    <div class="card pillar"><div class="share">2-3<small>a sett.</small></div><div><h3>Senza fregature</h3><p>Difetti noti, classifiche, finanziamenti, cosa controllare. Fa salvare e condividere. Obiettivo: fiducia e reach.</p></div></div>
+    <div class="card pillar"><div class="share">2<small>a sett.</small></div><div><h3>Sketch del piazzale</h3><p>Clienti impossibili, trattative, battibecchi di coppia, trend adattati. È il formato più condiviso del settore. Obiettivo: reach.</p></div></div>
+    <div class="card pillar"><div class="share">1-2<small>a sett.</small></div><div><h3>Vlad e Daniela</h3><p>La vostra storia di coppia e di lavoro, opinioni nette, risposte ai commenti. Trasforma chi guarda in follower.</p></div></div>
+    <div class="card pillar"><div class="share">1<small>a sett.</small></div><div><h3>Dietro le quinte</h3><p>Ritiro, preparazione, consegne, anche lontane. Risponde al sospetto principale del pubblico.</p></div></div>
+    <div class="card"><span class="tag warn">Dalla prossima produzione</span><p>Almeno tre video a settimana saranno "Auto in piazzale": oggi è il formato che rende di più su entrambe le piattaforme.</p></div>
+  </div>
+</section>
+
+<section id="riferimenti">
+  <span class="label">06 · Riferimenti</span>
+  <h2>I migliori del settore, e cosa prendiamo da loro</h2>
+  <p class="lede">Account italiani e stranieri che seguiamo per capire cosa funziona. Non li copiamo: prendiamo il meccanismo e lo portiamo nel vostro tono.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Account</th><th>Dove</th><th>Numeri</th><th>Cosa prendiamo</th></tr></thead>
+    <tbody>
+      <tr><td class="ring" colspan="4">Concessionari italiani</td></tr>
+      <tr><td><a href="https://www.instagram.com/sfr_motors/">@sfr_motors</a></td><td>Instagram</td><td class="n">69K · mediana 186K</td><td>Trucchi svelati, <a href="https://www.instagram.com/p/DCb5AIMNCci/">"Ti regalo 40.000 €"</a> (1,26 M)</td></tr>
+      <tr><td><a href="https://www.instagram.com/red.cars2.0/">@red.cars2.0</a></td><td>Instagram</td><td class="n">14K · mediana 44K</td><td><a href="https://www.instagram.com/p/DeL72fnshHG/">"Chi sei a seconda dell'auto"</a> (626K), <a href="https://www.instagram.com/p/DdjmWY8MtjX/">budget mensile</a> (1,2 M)</td></tr>
+      <tr><td><a href="https://www.tiktok.com/@autoveicoli95">@autoveicoli95</a></td><td>TikTok</td><td class="n">154K · fino a 390K</td><td><a href="https://www.tiktok.com/@autoveicoli95/video/7694588387533016353">Sketch con i clienti</a>, fino a 3.000 condivisioni</td></tr>
+      <tr><td><a href="https://www.tiktok.com/@francesco_iuffredo">@francesco_iuffredo</a></td><td>TikTok</td><td class="n">84K · fino a 93K</td><td><a href="https://www.tiktok.com/@francesco_iuffredo/video/7691651809986809121">Auto economiche con km, prezzo e garanzia detti a voce</a></td></tr>
+      <tr><td><a href="https://www.tiktok.com/@dielle_auto">@dielle_auto</a></td><td>TikTok</td><td class="n">25K · 200-400K</td><td><a href="https://www.tiktok.com/@dielle_auto/video/7683829123349007638">Spie e guasti spiegati in 40 secondi</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/dagnano_auto/">@dagnano_auto</a></td><td>Instagram</td><td class="n">2K · 334K</td><td><a href="https://www.instagram.com/p/DGdzBJ1sJzL/">Km alti, prezzo basso, "senti come suona"</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/tircarsrls/">@tircarsrls</a></td><td>Instagram</td><td class="n">219K</td><td><a href="https://www.instagram.com/p/DOOJ3c6iPKy/">Vetrina auto e collaborazioni con artisti</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/classautovelletri/">@classautovelletri</a> · <a href="https://www.instagram.com/anzideiauto/">@anzideiauto</a></td><td>Instagram</td><td class="n">piccoli · fino a 87K</td><td><a href="https://www.instagram.com/p/DbabTdgDfWN/">Sketch</a> con <a href="https://www.instagram.com/p/DeXW29VIexC/">personaggi fissi</a></td></tr>
+      <tr><td class="ring" colspan="4">Educazione auto e finanza</td></tr>
+      <tr><td><a href="https://www.tiktok.com/@spmotorservice">@spmotorservice</a></td><td>TikTok</td><td class="n">60K · fino a 160K</td><td><a href="https://www.tiktok.com/@spmotorservice/video/7681379886933593376">Meccanico ironico, molto salvato: "Manda questo video al tuo amico..."</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/autoccasionimilano/">@autoccasionimilano</a></td><td>Instagram</td><td class="n">6K · 1,7 M</td><td><a href="https://www.instagram.com/p/DHrEG1st_2l/">Polemica tecnica: PureTech contro BMW N47</a></td></tr>
+      <tr><td><a href="https://www.tiktok.com/@bankstation_">@bankstation_</a> · <a href="https://www.tiktok.com/@prestiter">@prestiter</a></td><td>TikTok</td><td class="n">900K · 639K</td><td><a href="https://www.tiktok.com/@bankstation_/video/7514714083095219458">Maxi rata spiegata semplice</a></td></tr>
+      <tr><td class="ring" colspan="4">Formati da fuori</td></tr>
+      <tr><td><a href="https://www.tiktok.com/@billythecarkid">@billythecarkid</a></td><td>TikTok, USA</td><td class="n">378K · 1,1 M</td><td><a href="https://www.tiktok.com/@billythecarkid/video/7691763459762982157">L'alleato di chi compra: i trucchi dei concessionari</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/alessandro_gino/">@alessandro_gino</a></td><td>Instagram</td><td class="n">121K · 103K</td><td><a href="https://www.instagram.com/p/DcyskAiMqgG/">Dietro le quinte del business dell'usato</a></td></tr>
+      <tr><td><a href="https://www.instagram.com/primauto_napoli/">@primauto_napoli</a></td><td>Instagram</td><td class="n">1,19 M</td><td><a href="https://www.instagram.com/p/DMnzWVroEIB/">Nostalgia: "Quando Mitsubishi faceva sognare"</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="numeri">
+  <span class="label">07 · Cosa misuriamo</span>
+  <h2>Pochi numeri</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Numero</th><th>Dove si legge</th><th>Perché conta</th><th>Obiettivo del primo mese</th></tr></thead>
+    <tbody>
+      <tr><td>Follower Instagram</td><td>Profilo</td><td>L'obiettivo concordato</td><td class="n">10.000 al 15 novembre</td></tr>
+      <tr><td>Mediana views Instagram</td><td>Insights</td><td>Dice se il livello medio sale, non solo i picchi</td><td class="n">da 9.000 a 15.000</td></tr>
+      <tr><td>Riproduzioni Facebook</td><td>Meta Business Suite</td><td>È il canale con più pubblico</td><td class="n">tornare alla mediana di luglio, 14.000</td></tr>
+      <tr><td>Reel sopra 50.000 views</td><td>Insights IG + FB</td><td>Sono quelli che portano i follower</td><td class="n">almeno 1 a settimana</td></tr>
+      <tr><td>Condivisioni ogni 1.000 views</td><td>Insights del reel</td><td>È il segnale che oggi pesa di più sulla distribuzione</td><td class="n">misurato dalla prima settimana</td></tr>
+      <tr><td>Commenti IG + FB</td><td>Insights</td><td>Misura la conversazione, e sono richieste potenziali</td><td class="n">misurato dalla prima settimana</td></tr>
+      <tr><td>Richieste dai social</td><td>DM, WhatsApp, telefono</td><td>Chiedere sempre "come ci hai conosciuto?"</td><td class="n">contate da subito</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="attenzioni">
+  <span class="label">08 · Attenzioni</span>
+  <h2>Quattro cose da curare insieme</h2>
+  <div class="grid g2">
+    <div class="card"><h3>Le richieste che si perdono</h3><p>Sotto un vostro reel si legge: <q>Avevo compilato sul sito... mai avuto risposta</q>. I nuovi video chiedono di commentare e scrivere: ogni richiesta va presa in carico da una persona, in poche ore, su Instagram e su Facebook.</p></div>
+    <div class="card"><h3>I commenti fuori luogo</h3><p>Sotto i video ci sono già commenti personali e inopportuni rivolti a Daniela. Con più visibilità aumenteranno: i filtri delle parole nascoste di Instagram e Facebook li bloccano prima che compaiano.</p></div>
+    <div class="card"><h3>L'immagine sul set</h3><p>Un commento dice <q>pantaloni corti e ciabatte... poco professionali</q>, e nel <a href="https://www.instagram.com/p/Dc5X_woukci/">reel della 420d da 17.000 €</a> si vede. Una regola minima per il giorno delle riprese basta a toglierlo dalla conversazione.</p></div>
+    <div class="card"><h3>Garanzia e finanziamenti</h3><p>La garanzia legale è un obbligo, e il pubblico lo sa (<q>La garanzia la devi dare per legge</q>): la presentiamo come tale, non come un regalo. Quando un video cita rate o tassi dei vostri finanziamenti, la legge chiede di indicare TAN, TAEG ed esempio rappresentativo.</p></div>
+  </div>
+</section>
+
+<section id="da-voi">
+  <span class="label">09 · Cosa serve da voi</span>
+  <h2>Per partire bene</h2>
+  <ol class="decisions">
+    <li><p><b>Una persona che risponde</b> a commenti, DM e WhatsApp generati dai reel, su Instagram e su Facebook.</p></li>
+    <li><p><b>Gli screenshot degli Insights</b> di Instagram e Facebook dei reel pubblicati, e una volta sola la crescita follower degli ultimi 90 giorni.</p></li>
+    <li><p><b>I dati da completare nei copioni</b> prima delle riprese: km, prezzi, date, dettagli della vostra storia.</p></li>
+    <li><p><b>I filtri delle parole nascoste</b> attivi su Instagram e Facebook.</p></li>
+    <li><p><b>Una regola minima di abbigliamento</b> per il giorno delle riprese.</p></li>
+  </ol>
+</section>
+
+<footer>
+  <span class="label">Come abbiamo lavorato</span>
+  <ul>
+    <li>Dati pubblici dei vostri profili, raccolti il 12 ottobre 2026: 120 reel Instagram (febbraio-ottobre), 130 reel e 60 post Facebook (maggio-ottobre), 120 video TikTok (giugno-ottobre). 12 reel trascritti e analizzati; 704 commenti Instagram e 601 commenti Facebook contati, 275 letti uno per uno.</li>
+    <li>Instagram e Facebook abbinati per data di pubblicazione e durata del video: 80 video presenti su entrambi, 40 solo su Instagram, 50 solo su Facebook.</li>
+    <li>Riferimenti: 108 reel di 12 account Instagram, 119 video di 8 account TikTok, 150 reel dagli hashtag #autousate, #venditaautousate, #concessionariaauto, #autosalone, #autousateitalia e 240 video dalla ricerca TikTok.</li>
+    <li>Le views di ottobre sono ancora in crescita.</li>
+    <li>Infocus Studio · ottobre 2026</li>
+  </ul>
+</footer>
+</div>
+
+<script>
+(function(){
+  var top=[
+    ["Audi Q5 \"in perfette condizioni\"",19773,351000,17,"https://www.instagram.com/p/Dasf9aGNVWK/","https://www.facebook.com/reel/1961071207908247"],
+    ["\"Che aspetti a portarti a casa questo gioiellino?\"",5540,174000,7,"https://www.instagram.com/p/DavJKezNEXV/","https://www.facebook.com/reel/1047187584433551"],
+    ["\"Non fartela scappare\"",14345,155000,84,"https://www.instagram.com/p/Dddd-3SislD/","https://www.facebook.com/reel/1637602518023016"],
+    ["\"Alfisti siate meno pignoli\"",9147,159000,20,"https://www.instagram.com/p/Da7fHDtCRs_/","https://www.facebook.com/reel/1611935127314703"],
+    ["BMW X3 a 11.900 €",19418,109000,7,"https://www.instagram.com/p/Dbx9z3nO6BM/","https://www.facebook.com/reel/1785324996056035"],
+    ["\"Consegna impegnativa\"",32265,85000,19,"https://www.instagram.com/p/DbfZDflihUj/","https://www.facebook.com/reel/1253519847852081"]
+  ];
+  var low=[
+    ["\"Più piccola di così...\" (Macchine piccole)",3094,5000,6,"https://www.instagram.com/p/DdTx9Sbq-QW/","https://www.facebook.com/reel/1871496537564902"],
+    ["\"Ragazze amanti delle 500 dove siete?\"",3926,4200,20,"https://www.instagram.com/p/DeHgFc7imBl/","https://www.facebook.com/reel/1110344674871669"],
+    ["\"Il re dell'usato\"",3826,4700,null,"https://www.instagram.com/p/DdsybW8iquF/","https://www.facebook.com/reel/2549905568825054"],
+    ["\"Non solo la diamo, ma ne rispondiamo anche\"",5160,5500,null,"https://www.instagram.com/p/DdrONjhiSFz/","https://www.facebook.com/reel/1764446868160753"]
+  ];
+  var max=380000,el=document.getElementById('bars'),fmt=new Intl.NumberFormat('it-IT');
+  function group(title,data){
+    var h=document.createElement('h4');h.textContent=title;el.appendChild(h);
+    data.forEach(function(d){
+      var row=document.createElement('div');row.className='bar';
+      var t=document.createElement('div');t.className='t';
+      var n=document.createElement('span');n.className='name';n.textContent=d[0];
+      var l=document.createElement('span');l.className='links';
+      [['IG',d[4]],['FB',d[5]]].forEach(function(x){var a=document.createElement('a');a.href=x[1];a.textContent=x[0];a.target='_blank';a.rel='noopener';l.appendChild(a)});
+      t.appendChild(n);t.appendChild(l);
+      var tr=document.createElement('div');tr.className='track';
+      var i=document.createElement('div');i.className='ig';i.style.width=(d[1]/max*100).toFixed(2)+'%';
+      var f=document.createElement('div');f.className='fb';f.style.width=(d[2]/max*100).toFixed(2)+'%';
+      tr.appendChild(i);tr.appendChild(f);
+      var m=document.createElement('div');m.className='meta';
+      m.textContent=fmt.format(d[1]+d[2])+' totali · IG '+fmt.format(d[1])+' · FB '+fmt.format(d[2])+(d[3]!==null?' · '+d[3]+' commenti':'');
+      row.appendChild(t);row.appendChild(tr);row.appendChild(m);el.appendChild(row);
+    });
+  }
+  group('I migliori',top);group('I peggiori',low);
+  var mean=12292;
+  function calc(){
+    var T=+document.getElementById('target').value||0,C=+document.getElementById('current').value||0,R=Math.max(1,+document.getElementById('reels').value||1),r=+document.getElementById('rate').value||1;
+    document.getElementById('rateOut').textContent=r.toLocaleString('it-IT',{minimumFractionDigits:1,maximumFractionDigits:1});
+    var need=Math.max(0,T-C),views=need/(r/1000),per=views/R;
+    document.getElementById('need').textContent=fmt.format(Math.round(per/100)*100);
+    document.getElementById('mult').textContent=(per/mean).toLocaleString('it-IT',{maximumFractionDigits:1})+' volte la media attuale ('+fmt.format(mean)+')';
+    document.getElementById('tot').textContent=(views/1e6).toLocaleString('it-IT',{maximumFractionDigits:1})+' milioni di views in totale';
+  }
+  ['target','current','reels','rate'].forEach(function(i){document.getElementById(i).addEventListener('input',calc)});calc();
+})();
+</script>
+
+</body>
+</html>
